@@ -5,28 +5,29 @@
   <title>Math Puzzles</title>
   <link rel="stylesheet" href="styles.css">
 
-  <!-- 1) Firebase Core -->
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
-  <!-- 2) Firebase Auth -->
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
-  <!-- 3) Firebase Firestore -->
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"></script>
+  <!-- 1) Firebase core -->
+<script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
+<!-- 2) Firebase Auth (registers auth component) -->
+<script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
+<!-- 3) Firebase Firestore (registers firestore component) -->
+<script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"></script>
 
-  <!-- 4) Initialize Firebase (global firebase object) -->
-  <script>
-    // 🔥 Paste your actual config here:
-    const firebaseConfig = {
-      apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
+<script>
+  // 🔥 Paste your real config here (all fields, exactly as in console)
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
     authDomain: "math-puzzles-17f9e.firebaseapp.com",
     projectId: "math-puzzles-17f9e",
     storageBucket: "math-puzzles-17f9e.firebasestorage.app",
     messagingSenderId: "218812391235",
     appId: "1:218812391235:web:ab76e465044fc2af7359f6",
     measurementId: "G-WHXWNYGGQT"
-    };
-    // This line sets up the global `firebase` namespace
-    firebase.initializeApp(firebaseConfig);
-  </script>
+  };
+  // This line makes firebase.auth() and firebase.firestore() available
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
 
   <!-- 5) Your application logic -->
   <script defer src="app.js"></script>
