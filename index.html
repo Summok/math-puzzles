@@ -4,45 +4,43 @@
   <meta charset="UTF-8">
   <title>Math Puzzles</title>
   <link rel="stylesheet" href="styles.css">
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
-  import { getAuth }       from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-  import { getFirestore }  from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
+  <!-- 1) Firebase Core -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
+  <!-- 2) Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
+  <!-- 3) Firebase Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"></script>
+
+  <!-- 4) Initialize Firebase (global firebase object) -->
+  <script>
+    // 🔥 Paste your actual config here:
+    const firebaseConfig = {
+      apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
     authDomain: "math-puzzles-17f9e.firebaseapp.com",
     projectId: "math-puzzles-17f9e",
     storageBucket: "math-puzzles-17f9e.firebasestorage.app",
     messagingSenderId: "218812391235",
     appId: "1:218812391235:web:ab76e465044fc2af7359f6",
     measurementId: "G-WHXWNYGGQT"
-  };
+    };
+    // This line sets up the global `firebase` namespace
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  export const auth = getAuth(app);
-  export const db   = getFirestore(app);
-</script>
-  <script type="module" defer src="app.js"></script>
+  <!-- 5) Your application logic -->
+  <script defer src="app.js"></script>
 </head>
 <body>
   <h1>Welcome to Math Puzzles</h1>
-  
+
   <!-- Authentication UI -->
   <div id="auth-container">
     <input id="email"    type="email"    placeholder="Email">
     <input id="password" type="password" placeholder="Password">
     <button id="btn-register">Register</button>
     <button id="btn-login"   >Login   </button>
-    <button id="btn-logout" hidden>Logout</button>
+    <button id="btn-logout"  hidden>Logout</button>
   </div>
 
   <!-- Scoreboard -->
