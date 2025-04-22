@@ -3,32 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Math Puzzles</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- You might want to add a styles.css file for basic styling -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    /* Basic Styling for clarity */
+    body { font-family: sans-serif; padding: 20px; }
+    #auth-container input, #auth-container button { margin: 5px; padding: 8px; }
+    #scoreboard li { margin-bottom: 5px; }
+    h1, h2 { border-bottom: 1px solid #eee; padding-bottom: 5px;}
+  </style>
 
-  <!-- 1) Compat build: core, auth, firestore -->
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
-
-<script>
-  // 🔥 Paste your real config here (all fields, exactly as in console)
-  const firebaseConfig = {
-    apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
-    authDomain: "math-puzzles-17f9e.firebaseapp.com",
-    projectId: "math-puzzles-17f9e",
-    storageBucket: "math-puzzles-17f9e.firebasestorage.app",
-    messagingSenderId: "218812391235",
-    appId: "1:218812391235:web:ab76e465044fc2af7359f6",
-    measurementId: "G-WHXWNYGGQT"
-  };
-  // This line makes firebase.auth() and firebase.firestore() available
-  firebase.initializeApp(firebaseConfig);
-</script>
-
-
-
-  <!-- 5) Your application logic -->
-  <script defer src="app.js"></script>
+  <!-- Load your application logic as a module -->
+  <!-- Firebase SDKs will be imported *inside* app.js -->
+  <script type="module" defer src="app.js"></script>
 </head>
 <body>
   <h1>Welcome to Math Puzzles</h1>
@@ -44,6 +31,12 @@
 
   <!-- Scoreboard -->
   <h2>Top Scores</h2>
-  <ol id="scoreboard"></ol>
+  <ol id="scoreboard">
+    <!-- Scores will be loaded here by JavaScript -->
+  </ol>
+
+  <hr>
+  <p><em>Open browser console (F12) to test saving scores. Type <code>saveScore(123)</code> after logging in (replace 123 with a score).</em></p>
+
 </body>
 </html>
