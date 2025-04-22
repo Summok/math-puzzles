@@ -22,15 +22,7 @@ import {
 // 2. 🔥 Paste your real Firebase project configuration here
 // Get this from your Firebase project settings > General > Your apps > SDK setup and configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDMc_xd6t9xLnkRUG6Oq2Rw5sK9hgfJouI",
-  authDomain: "math-puzzles-17f9e.firebaseapp.com",
-  projectId: "math-puzzles-17f9e",
-  storageBucket: "math-puzzles-17f9e.firebasestorage.app",
-  messagingSenderId: "218812391235",
-  appId: "1:218812391235:web:ab76e465044fc2af7359f6",
-  measurementId: "G-WHXWNYGGQT"
-};
+
 
 // 3. Initialize Firebase
 const app = initializeApp(firebaseConfig);
